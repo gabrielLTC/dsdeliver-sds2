@@ -10,7 +10,8 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "tb_product")
-public class Product implements Serializable{
+public class Product implements Serializable {
+	
 
 	private static final long serialVersionUID = 1L;
 	
@@ -19,12 +20,11 @@ public class Product implements Serializable{
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String name;
-	private Double price;
+	private Double price; 
 	private String description;
 	private String imageUri;
 	
-	//Constructors
-	public Product() {	
+	public Product() {
 	}
 
 	public Product(Long id, String name, Double price, String description, String imageUri) {
@@ -36,7 +36,6 @@ public class Product implements Serializable{
 		this.imageUri = imageUri;
 	}
 
-	//Getters & Setters
 	public Long getId() {
 		return id;
 	}
@@ -77,7 +76,6 @@ public class Product implements Serializable{
 		this.imageUri = imageUri;
 	}
 
-	//HashCode
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -86,7 +84,6 @@ public class Product implements Serializable{
 		return result;
 	}
 
-	//Equals
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -103,10 +100,6 @@ public class Product implements Serializable{
 			return false;
 		return true;
 	}
-	
-
-	
-	
 	
 	
 }
